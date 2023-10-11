@@ -1,0 +1,57 @@
+#подключение к базе данных
+#Eсли false будет использоваться data.yml файл
+SQL:
+  mySQL: false
+  host: "yourHost"
+  port: 3306
+  root: "yourRoot"
+  password: "yourPassword"
+  databaseName: "yourBase"
+
+King:
+  minPlayer: 1 #минимум игроков в игре
+  radius: 5 #радиус зоны
+  cooldown: 15 #сколько нужно стоять
+  reCooldown: 60 #задержка перед повторным началом
+  discarding: 1.0 #сила отбрасывания игрока
+
+CheatsProtect: #если true - не разрешить побеждать игрок с этими режимами
+  gameMode: true
+  fly: true
+  vanish: true
+
+GUI:
+  displayName: "Топ игроков царя горы"
+  backPage: "Предыдущая страница"
+  nextPage: "Следующая страница"
+  close: "Назад"
+  itemName: "%winner_top%"
+  itemLore:
+    - "Ник - %winner_name%"
+    - "%winner_count% победы"
+    - "заработал - %winner_balance%"
+    - "UUID - %winner_uuid%"
+
+
+EveryWinPrize:
+  notFoundPlayer: "Не достаточно игроков минимум %config_minimumPlayers%. На данный момент (%winner_playersNow%/%config_minimumPlayers%)"
+  cooldownMessage: "До начала игры осталось еще %winner_cooldown% секунд"
+  timerMessage: "Стойте еще %winner_wait% секунд"
+  player:
+    - "Вы стали царем горы (%winner_randomPrice%)"
+    - "%winner_randomPrice% вам было начислено"
+
+  global:
+    - "%winner_name% стал царем горы и получил %winner_randomPrice%"
+
+  winnerTitle:
+    text: "Поздравляем!"
+    subtext: "%winner_randomPrice%"
+    time1: 30
+    time2: 60
+    time3: 30
+
+Random: #указываете минимальный и максимальный выигрыш
+  min: 100
+  max: 500
+

@@ -1,0 +1,11 @@
+name: MKingX
+version: '${project.version}'
+main: me.galtap.mkingx.MKingX
+api-version: '1.16'
+description: плагин предоставляющий обновленную мини игру на царя горы
+author: GitHub/JavaDeveloper222
+website: https://vk.com/plugincrafting
+softdepend: [Vault, PlaceholderAPI]
+commands:
+  king:
+    description: команда
